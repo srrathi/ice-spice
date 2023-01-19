@@ -1,0 +1,19 @@
+{
+  "name": "ice-data-scraper",
+  "version": "1.0.0",
+  "description": "scrapper to scrap ice data recorded by different metro stations in finland",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "web-scrapping",
+    "sql"
+  ],
+  "author": "Sitaram Rathi",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^19.5.2"
+  }
+}
