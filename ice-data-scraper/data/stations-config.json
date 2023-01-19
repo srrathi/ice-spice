@@ -2533,7 +2533,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "21.Nov.2002",
@@ -2558,7 +2558,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "17.Dec.2003",
@@ -2583,7 +2583,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "09.Jan.2005",
@@ -2608,7 +2608,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "18.Dec.2005",
@@ -2633,7 +2633,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "19.Jan.2007",
@@ -2658,7 +2658,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "13.Jan.2008",
@@ -2683,7 +2683,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "05.Jan.2009",
@@ -2708,7 +2708,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "24.Dec.2009",
@@ -2733,7 +2733,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "30.Nov.2010",
@@ -2758,7 +2758,7 @@
                 "1",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "18.Jan.2012",
@@ -2783,7 +2783,7 @@
                 "1",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "13.Dec.2012",
@@ -2808,7 +2808,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "10.Jan.2014",
@@ -2833,7 +2833,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "27.Dec.2014",
@@ -2858,7 +2858,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "05.Jan.2016",
@@ -2883,7 +2883,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "26.Dec.2016",
@@ -2908,7 +2908,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "27.Dec.2017",
@@ -2933,7 +2933,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "03.Jan.2019",
@@ -2958,7 +2958,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "27.Dec.2019",
@@ -2983,7 +2983,7 @@
                 "1",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         },
         {
             "Beginning": "04.Jan.2021",
@@ -3008,7 +3008,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STKE1,SEIMSW"
+            "Station-code": "STKE1SEIMSW"
         }
     ],
     [
@@ -4541,7 +4541,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "16.Nov.2002",
@@ -4566,7 +4566,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "17.Dec.2003",
@@ -4591,7 +4591,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "10.Dec.2004",
@@ -4616,7 +4616,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "22.Dec.2005",
@@ -4641,7 +4641,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "19.Jan.2007",
@@ -4666,7 +4666,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "03.Jan.2008",
@@ -4691,7 +4691,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "02.Jan.2009",
@@ -4716,7 +4716,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "22.Dec.2009",
@@ -4741,7 +4741,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "30.Nov.2010",
@@ -4766,7 +4766,7 @@
                 "1",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "09.Jan.2012",
@@ -4791,7 +4791,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "07.Dec.2012",
@@ -4816,7 +4816,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "10.Dec.2013",
@@ -4841,7 +4841,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "29.Dec.2014",
@@ -4866,7 +4866,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "05.Jan.2016",
@@ -4891,7 +4891,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "11.Dec.2016",
@@ -4916,7 +4916,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "29.Dec.2017",
@@ -4941,7 +4941,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "21.Dec.2018",
@@ -4966,7 +4966,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "15.Dec.2019",
@@ -4991,7 +4991,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         },
         {
             "Beginning": "02.Jan.2021",
@@ -5016,7 +5016,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STOU1,SEIMSW"
+            "Station-code": "STOU1SEIMSW"
         }
     ],
     [
@@ -22321,7 +22321,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "25.Jan.2004",
@@ -22346,7 +22346,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "01.Mar.2005",
@@ -22371,7 +22371,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "31.Jan.2006",
@@ -22396,7 +22396,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "28.Feb.2007",
@@ -22421,7 +22421,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "30.Jan.2010",
@@ -22446,7 +22446,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "29.Dec.2010",
@@ -22471,7 +22471,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "10.Feb.2012",
@@ -22496,7 +22496,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "19.Jan.2013",
@@ -22521,7 +22521,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         },
         {
             "Beginning": "04.Mar.2018",
@@ -22546,7 +22546,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STSEAUNYU.MA"
+            "Station-code": "STSEAUNYUMA"
         }
     ],
     [
@@ -28205,7 +28205,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "29.Dec.2002",
@@ -28230,7 +28230,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "23.Jan.2004",
@@ -28255,7 +28255,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "26.Feb.2005",
@@ -28280,7 +28280,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "11.Feb.2006",
@@ -28305,7 +28305,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "21.Feb.2007",
@@ -28330,7 +28330,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "16.Jan.2010",
@@ -28355,7 +28355,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "29.Dec.2010",
@@ -28380,7 +28380,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "11.Feb.2012",
@@ -28405,7 +28405,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "22.Jan.2013",
@@ -28430,7 +28430,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "21.Feb.2018",
@@ -28455,7 +28455,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         },
         {
             "Beginning": "06.Feb.2021",
@@ -28480,7 +28480,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STHA1,SEIMS"
+            "Station-code": "STHA1SEIMS"
         }
     ],
     [
@@ -30492,7 +30492,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "05.Dec.2002",
@@ -30517,7 +30517,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "01.Jan.2004",
@@ -30542,7 +30542,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "26.Jan.2005",
@@ -30567,7 +30567,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "18.Dec.2005",
@@ -30592,7 +30592,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "28.Jan.2007",
@@ -30617,7 +30617,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "08.Jan.2008",
@@ -30642,7 +30642,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "09.Jan.2009",
@@ -30667,7 +30667,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "22.Dec.2009",
@@ -30692,7 +30692,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "04.Dec.2010",
@@ -30717,7 +30717,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "19.Jan.2012",
@@ -30742,7 +30742,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "22.Dec.2012",
@@ -30767,7 +30767,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "15.Jan.2014",
@@ -30792,7 +30792,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "27.Dec.2014",
@@ -30817,7 +30817,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "08.Jan.2016",
@@ -30842,7 +30842,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "19.Dec.2016",
@@ -30867,7 +30867,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "11.Jan.2018",
@@ -30892,7 +30892,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "29.Dec.2018",
@@ -30917,7 +30917,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "15.Feb.2020",
@@ -30942,7 +30942,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         },
         {
             "Beginning": "16.Jan.2021",
@@ -30967,7 +30967,7 @@
                 "0",
                 "0"
             ],
-            "Station-code": "STINU.KAPOSE"
+            "Station-code": "STINUKAPOSE"
         }
     ],
     [

@@ -378,7 +378,7 @@
             "Fl-total": "87.5",
             "Vol-sum": "1947.3",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -390,7 +390,7 @@
             "Fl-total": "101.8",
             "Vol-sum": "2753.4",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -402,7 +402,7 @@
             "Fl-total": "123.5",
             "Vol-sum": "3301.7",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -414,7 +414,7 @@
             "Fl-total": "47.8",
             "Vol-sum": "791.9",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -426,7 +426,7 @@
             "Fl-total": "154.6",
             "Vol-sum": "5745.1",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -438,7 +438,7 @@
             "Fl-total": "104.1",
             "Vol-sum": "2898.5",
             "Station-name": "Station: Kemi 1, Seegebiet im SW",
-            "Station-code": "STKE1,SEIMSW",
+            "Station-code": "STKE1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         }
@@ -674,7 +674,7 @@
             "Fl-total": "93.0",
             "Vol-sum": "2347.6",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -686,7 +686,7 @@
             "Fl-total": "106.5",
             "Vol-sum": "2585.2",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -698,7 +698,7 @@
             "Fl-total": "123.2",
             "Vol-sum": "3566.0",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -710,7 +710,7 @@
             "Fl-total": "50.3",
             "Vol-sum": "536.7",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -722,7 +722,7 @@
             "Fl-total": "162.5",
             "Vol-sum": "6595.8",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -734,7 +734,7 @@
             "Fl-total": "109.6",
             "Vol-sum": "3191.3",
             "Station-name": "Station: Oulu 1, Seegebiet im SW",
-            "Station-code": "STOU1,SEIMSW",
+            "Station-code": "STOU1SEIMSW",
             "Country": "FINLAND",
             "Country-code": "FI"
         }
@@ -3634,7 +3634,7 @@
             "Fl-total": "0.0",
             "Vol-sum": "0.0",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -3646,7 +3646,7 @@
             "Fl-total": "4.0",
             "Vol-sum": "12.5",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -3658,7 +3658,7 @@
             "Fl-total": "8.6",
             "Vol-sum": "68.4",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -3670,7 +3670,7 @@
             "Fl-total": "0.1",
             "Vol-sum": "0.3",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -3682,7 +3682,7 @@
             "Fl-total": "39.1",
             "Vol-sum": "615.4",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -3694,7 +3694,7 @@
             "Fl-total": "16.3",
             "Vol-sum": "167.5",
             "Station-name": "Station: See außerhalb Nyhamn u. Marhällan",
-            "Station-code": "STSEAUNYU.MA",
+            "Station-code": "STSEAUNYUMA",
             "Country": "FINLAND",
             "Country-code": "FI"
         }
@@ -4892,7 +4892,7 @@
             "Fl-total": "0.0",
             "Vol-sum": "0.0",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -4904,7 +4904,7 @@
             "Fl-total": "4.6",
             "Vol-sum": "11.6",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -4916,7 +4916,7 @@
             "Fl-total": "20.3",
             "Vol-sum": "200.6",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -4928,7 +4928,7 @@
             "Fl-total": "1.7",
             "Vol-sum": "5.8",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -4940,7 +4940,7 @@
             "Fl-total": "64.3",
             "Vol-sum": "768.1",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -4952,7 +4952,7 @@
             "Fl-total": "25.6",
             "Vol-sum": "273.9",
             "Station-name": "Station: Hanko 1, See im S",
-            "Station-code": "STHA1,SEIMS",
+            "Station-code": "STHA1SEIMS",
             "Country": "FINLAND",
             "Country-code": "FI"
         }
@@ -5336,7 +5336,7 @@
             "Fl-total": "49.7",
             "Vol-sum": "624.1",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -5348,7 +5348,7 @@
             "Fl-total": "63.0",
             "Vol-sum": "1016.3",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -5360,7 +5360,7 @@
             "Fl-total": "87.9",
             "Vol-sum": "1505.0",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -5372,7 +5372,7 @@
             "Fl-total": "3.2",
             "Vol-sum": "8.0",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -5384,7 +5384,7 @@
             "Fl-total": "133.6",
             "Vol-sum": "3864.9",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         },
@@ -5396,7 +5396,7 @@
             "Fl-total": "66.8",
             "Vol-sum": "1249.5",
             "Station-name": "Station: Inkoo u. Kantvik – Porkkala See",
-            "Station-code": "STINU.KAPOSE",
+            "Station-code": "STINUKAPOSE",
             "Country": "FINLAND",
             "Country-code": "FI"
         }
