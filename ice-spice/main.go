@@ -2,21 +2,18 @@ package main
 
 import (
 	"log"
+	"os"
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
 	"github.com/srrathi/ice-spice/models"
-	"golang.org/x/mod/sumdb/storage"
-	"gorm.io/gorm"
+	"github.com/srrathi/ice-spice/storage"
 )
-
-type Repository struct {
-	DB *gorm.DB
-}
 
 func (r *Repository) SetupRoutes(app *fiber.App) {
 	api := app.Group("/api")
-	api.Get("/data/:stationCode", r.GetStationData)
+	api.Get("/station_data/:stationCode", r.GetStationData)
+	api.Get("/analysis_data/:stationCode", r.GetAnalysisData)
 }
 
 func main() {
@@ -25,9 +22,23 @@ func main() {
 		log.Fatal(err)
 	}
 
+	config := &storage.Config{
+		Host:     os.Getenv("DB_HOST"),
+		Port:     os.Getenv("DB_PORT"),
+		Password: os.Getenv("DB_PASSWORD"),
+		User:     os.Getenv("DB_USER"),
+		DBName:   os.Getenv("DB_DATABASE"),
+		SSLMode:  os.Getenv("DB_SSLMODE"),
+	}
+
 	db, err := storage.NewConnection(config)
 	if err != nil {
 		log.Fatal("Could not load database")
+	}
+
+	err = models.MigrateDatabases(db)
+	if err != nil {
+		log.Fatal("Could not migrate database", err.Error())
 	}
 
 	r := Repository{
@@ -36,6 +47,5 @@ func main() {
 
 	app := fiber.New()
 	r.SetupRoutes(app)
-	app.Listen(":9001")
-
+	app.Listen(":8080")
 }
