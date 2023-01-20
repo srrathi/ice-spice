@@ -14,8 +14,8 @@ type Repository struct {
 
 func (r *Repository) SetupRoutes(app *fiber.App) {
 	api := app.Group("/api")
-	api.Get("/station_data/:stationCode", r.GetStationData)
-	api.Get("/analysis_data/:stationCode", r.GetAnalysisData)
+	api.Get("/station_data", r.GetStationData)
+	api.Get("/analysis_data", r.GetAnalysisData)
 }
 
 // Function to fetch station baltic sea ice data with the analysis data of that station
@@ -24,11 +24,11 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 	analysisModels := &[]models.AnalysisData{}
 	stationsDataResponse := []models.StationDataResponse{}
 	analysisDataResponse := []models.AnalysisDataResponse{}
-	stationCode := context.Params("stationCode")
+	stationCode := context.Query("stationCode")
 
 	if stationCode == "" {
 		context.Status(http.StatusBadRequest).JSON(&fiber.Map{
-			"message": "station code cannot be empty",
+			"message": "stationCode query param cannot be empty",
 		})
 		return nil
 	}
@@ -37,6 +37,12 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 	if err != nil {
 		context.Status(http.StatusBadRequest).JSON(
 			&fiber.Map{"message": "could not get stations"})
+		return err
+	}
+
+	if len(*stationsModels) == 0 {
+		context.Status(http.StatusOK).JSON(
+			&fiber.Map{"message": "No data found for this metro station among metro stations in Finland"})
 		return err
 	}
 
@@ -98,6 +104,12 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 		analysisDataResponse = append(analysisDataResponse, analysisResponse)
 	}
 
+	if len(*analysisModels) == 0 {
+		context.Status(http.StatusOK).JSON(
+			&fiber.Map{"message": "No data found for this metro station among metro stations in Finland"})
+		return err
+	}
+
 	context.Status(http.StatusOK).JSON(&fiber.Map{
 		"message": "metro station data fetched successfully",
 		"data": &fiber.Map{
@@ -112,11 +124,11 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 func (r *Repository) GetAnalysisData(context *fiber.Ctx) error {
 	analysisModels := &[]models.AnalysisData{}
 	analysisDataResponse := []models.AnalysisDataResponse{}
-	stationCode := context.Params("stationCode")
+	stationCode := context.Query("stationCode")
 
 	if stationCode == "" {
 		context.Status(http.StatusBadRequest).JSON(&fiber.Map{
-			"message": "station code cannot be empty",
+			"message": "stationCode query param cannot be empty",
 		})
 		return nil
 	}
