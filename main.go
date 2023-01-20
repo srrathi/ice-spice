@@ -6,15 +6,10 @@ import (
 
 	"github.com/gofiber/fiber/v2"
 	"github.com/joho/godotenv"
+	"github.com/srrathi/ice-spice/controller"
 	"github.com/srrathi/ice-spice/models"
 	"github.com/srrathi/ice-spice/storage"
 )
-
-func (r *Repository) SetupRoutes(app *fiber.App) {
-	api := app.Group("/api")
-	api.Get("/station_data/:stationCode", r.GetStationData)
-	api.Get("/analysis_data/:stationCode", r.GetAnalysisData)
-}
 
 func main() {
 	err := godotenv.Load(".env")
@@ -41,7 +36,7 @@ func main() {
 		log.Fatal("Could not migrate database", err.Error())
 	}
 
-	r := Repository{
+	r := controller.Repository{
 		DB: db,
 	}
 
