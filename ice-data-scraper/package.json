@@ -15,7 +15,6 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "pg": "^8.8.0",
     "puppeteer": "^19.5.2"
   }
 }
