@@ -1,4 +1,4 @@
-package main
+package controller
 
 import (
 	"net/http"
@@ -10,6 +10,12 @@ import (
 
 type Repository struct {
 	DB *gorm.DB
+}
+
+func (r *Repository) SetupRoutes(app *fiber.App) {
+	api := app.Group("/api")
+	api.Get("/station_data/:stationCode", r.GetStationData)
+	api.Get("/analysis_data/:stationCode", r.GetAnalysisData)
 }
 
 // Function to fetch station baltic sea ice data with the analysis data of that station

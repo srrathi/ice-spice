@@ -1,5 +1,5 @@
 ice-data-scraper/node_modules
-ice-spice/go.sum
 .env
 ice-data-scraper/.env
-ice-spice/.env
+ice-spice
+go.sum
