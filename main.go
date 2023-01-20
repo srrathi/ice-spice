@@ -36,6 +36,8 @@ func main() {
 	}
 
 	app := fiber.New()
+
+	app.Static("/", "./public/index.html")
 	r.SetupRoutes(app)
 	app.Listen("0.0.0.0:" + APP_PORT)
 }
