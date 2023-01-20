@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	APP_PORT := os.Getenv("PORT")
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
 		Port:     os.Getenv("DB_PORT"),
@@ -36,5 +37,5 @@ func main() {
 
 	app := fiber.New()
 	r.SetupRoutes(app)
-	app.Listen(":8080")
+	app.Listen("0.0.0.0:" + APP_PORT)
 }
