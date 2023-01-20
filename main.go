@@ -5,18 +5,12 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/joho/godotenv"
 	"github.com/srrathi/ice-spice/controller"
 	"github.com/srrathi/ice-spice/models"
 	"github.com/srrathi/ice-spice/storage"
 )
 
 func main() {
-	err := godotenv.Load(".env")
-	if err != nil {
-		log.Fatal(err)
-	}
-
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
 		Port:     os.Getenv("DB_PORT"),
