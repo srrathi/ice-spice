@@ -104,12 +104,6 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 		analysisDataResponse = append(analysisDataResponse, analysisResponse)
 	}
 
-	if len(*analysisModels) == 0 {
-		context.Status(http.StatusOK).JSON(
-			&fiber.Map{"message": "No data found for this metro station among metro stations in Finland"})
-		return err
-	}
-
 	context.Status(http.StatusOK).JSON(&fiber.Map{
 		"message": "metro station data fetched successfully",
 		"data": &fiber.Map{
@@ -137,6 +131,12 @@ func (r *Repository) GetAnalysisData(context *fiber.Ctx) error {
 	if err != nil {
 		context.Status(http.StatusBadRequest).JSON(
 			&fiber.Map{"message": "could not get analysis data for the station"})
+		return err
+	}
+
+	if len(*analysisModels) == 0 {
+		context.Status(http.StatusOK).JSON(
+			&fiber.Map{"message": "No data found for this metro station among metro stations in Finland"})
 		return err
 	}
 
