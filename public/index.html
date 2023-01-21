@@ -6,460 +6,540 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ice-Spice | Developed by Sitaram Rathi</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans', sans-serif;
+            background-color: #caebf2;
+            color: #001f3f;
+            padding: 20px auto;
+            justify-content: center;
+            display: flex;
+            text-align: justify;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        .container {
+            max-width: 1000px;
+        }
+
+        .container>h1 {
+            text-decoration: underline;
+        }
+
+        pre code {
+            background-color: #eee;
+            border: 1px solid #999;
+            display: block;
+            padding: 20px;
+            line-height: 140%;
+        }
+
+        code {
+            font-size: 120%;
+        }
+
+        code {
+            font-family: monospace;
+        }
+
+        pre {
+            font-family: monospace;
+            white-space: pre;
+        }
+
+        #stations-data {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #stations-data td,
+        #stations-data th {
+            border: 1px solid #999;
+            padding: 8px;
+        }
+
+        #stations-data tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #stations-data tr:hover {
+            background-color: #ddd;
+        }
+
+        #stations-data th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #001f3f;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="ice-spice-api-to-fetch-baltic-sea-ice-data">ICE SPICE - API to fetch Baltic Sea Ice data</h1>
-    <p>REST API to fetch Baltic Sea Ice Data recorded by different metrological stations in Finland.</p>
-    <h2 id="table-of-contents">Table of Contents</h2>
-    <ul>
-        <li><a href="#apis-schema">API&#39;s Schema</a></li>
-        <li><a href="#generated-station-code">Generated Station Code</a></li>
-        <li><a href="#usage-and-examples">Usage and Examples</a></li>
-        <li><a href="#description-of-data">Description of Data</a></li>
-        <li><a href="#data-source">Data Source</a></li>
-        <li><a href="#technologies-used">Technologies Used</a></li>
-        <li><a href="#contribution">Contribution</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-    <h1 id="api-s-schema">API&#39;s Schema</h1>
-    <p>Currently the application supports below end points and no auth is required for them as of now.</p>
-    <ol>
-        <li>
-            <p>Endpoint 1</p>
-        </li>
-        <li>
-            <p>Request URL - <a
-                    href="https://ice-spice-production.up.railway.app/api/station_data?stationCode=STATION_CODE">https://ice-spice-production.up.railway.app/api/station_data?stationCode=STATION_CODE</a>
-            </p>
-        </li>
-        <li>Request Method - <code>GET</code></li>
-        <li>Request Query Param - <code>stationCode</code></li>
-        <li>Query Param Value - value for <code>stationCode</code> query param can be obtained from the below table
-            where station code for each metrological station is given.</li>
-    </ol>
-    <p>It gives all the ice data and the analysis calculated on it by that metrological station whose station code is
-        added in the params. It can be used to fetch all the data recorded by particular metrological station over the
-        past years.</p>
-    <ol>
-        <li>
-            <p>Endpoint 2 </p>
-        </li>
-        <li>
-            <p>Request URL - <a
-                    href="https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STATION_CODE">https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STATION_CODE</a>
-            </p>
-        </li>
-        <li>Request Method - <code>GET</code></li>
-        <li>Request Query Param - <code>stationCode</code></li>
-        <li>Query Param Value - value for <code>stationCode</code> query param can be obtained from the below table
-            where station code for each metrological station is given.</li>
-    </ol>
-    <p>It can be used to fetch only the analysis data obtained by particular metrological station over the past years of
-        the ice data recorded by it.</p>
-    <h1 id="generated-station-code">Generated Station Code</h1>
-    <p>Station code generated for different metrological stations of Finland is given below.</p>
-    <table>
-        <thead>
-            <tr>
-                <th>STATION NAME</th>
-                <th>GENERATED STATION CODE</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Röyttä – Etukari</td>
-                <td>STROET</td>
-            </tr>
-            <tr>
-                <td>Etukari – Ristinmatala</td>
-                <td>STETRI</td>
-            </tr>
-            <tr>
-                <td>Ajos – Ristinmatala</td>
-                <td>STAJRI</td>
-            </tr>
-            <tr>
-                <td>Ristinmatala – Kemi 2</td>
-                <td>STRIKE2</td>
-            </tr>
-            <tr>
-                <td>Kemi 2 – Kemi 1</td>
-                <td>STKE2KE1</td>
-            </tr>
-            <tr>
-                <td>Kemi 1, Seegebiet im SW</td>
-                <td>STKE1SEIMSW</td>
-            </tr>
-            <tr>
-                <td>Kemi 2 – Ulkokrunni – Virpiniemi</td>
-                <td>STKE2ULVI</td>
-            </tr>
-            <tr>
-                <td>Oulu, Hafen – Kattilankalla</td>
-                <td>STOUHAKA</td>
-            </tr>
-            <tr>
-                <td>Kattilankalla – Oulu 1</td>
-                <td>STKAOU1</td>
-            </tr>
-            <tr>
-                <td>Oulu 1, Seegebiet im SW</td>
-                <td>STOU1SEIMSW</td>
-            </tr>
-            <tr>
-                <td>Offene See N-lich Breite Marjaniemi</td>
-                <td>STOFSEN-BRMA</td>
-            </tr>
-            <tr>
-                <td>Raahe, Hafen – Heikinkari</td>
-                <td>STRAHAHE</td>
-            </tr>
-            <tr>
-                <td>Heikinkari – Raahe Leuchtturm</td>
-                <td>STHERALE</td>
-            </tr>
-            <tr>
-                <td>Raahe Leuchtturm – Nahkiainen</td>
-                <td>STRALENA</td>
-            </tr>
-            <tr>
-                <td>Breitengrad Marjaniemi – Ulkokalla, See</td>
-                <td>STBRMAULSE</td>
-            </tr>
-            <tr>
-                <td>Rahja, Hafen – Välimatala</td>
-                <td>STRAHAVA</td>
-            </tr>
-            <tr>
-                <td>Välimatala bis Linie Ulkokalla – Ykskivi</td>
-                <td>STVABILIULYK</td>
-            </tr>
-            <tr>
-                <td>Breitengrad Ulkokalla – Pietarsaari, See</td>
-                <td>STBRULPISE</td>
-            </tr>
-            <tr>
-                <td>Ykspihlaja – Repskär</td>
-                <td>STYKRE</td>
-            </tr>
-            <tr>
-                <td>Repskär – Kokkola Leuchtturm</td>
-                <td>STREKOLE</td>
-            </tr>
-            <tr>
-                <td>Kokkola Leuchtturm, See außerhalb</td>
-                <td>STKOLESEAU</td>
-            </tr>
-            <tr>
-                <td>Pietarsaari – Kallan</td>
-                <td>STPIKA</td>
-            </tr>
-            <tr>
-                <td>Kallan, Seegebiet außerhalb</td>
-                <td>STKASEAU</td>
-            </tr>
-            <tr>
-                <td>Breite Pietarsaari – Nordvalen im NE</td>
-                <td>STBRPINOIMNE</td>
-            </tr>
-            <tr>
-                <td>Nordvalen, Seegebiet im ENE</td>
-                <td>STNOSEIMEN</td>
-            </tr>
-            <tr>
-                <td>Nordvalen – Norrskär, See im W</td>
-                <td>STNONOSEIMW</td>
-            </tr>
-            <tr>
-                <td>Vaskiluoto – Ensten</td>
-                <td>STVAEN</td>
-            </tr>
-            <tr>
-                <td>Ensten – Vaasa Leuchtturm</td>
-                <td>STENVALE</td>
-            </tr>
-            <tr>
-                <td>Vaasa Leuchtturm – Norrskär</td>
-                <td>STVALENO</td>
-            </tr>
-            <tr>
-                <td>Norrskär, Seegebiet im SW</td>
-                <td>STNOSEIMSW</td>
-            </tr>
-            <tr>
-                <td>Kaskinen – Sälgrund</td>
-                <td>STKASA</td>
-            </tr>
-            <tr>
-                <td>Sälgrund, Seegebiet außerhalb</td>
-                <td>STSASEAU</td>
-            </tr>
-            <tr>
-                <td>Offene See N-lich Breite Yttergrund</td>
-                <td>STOFSEN-BRYT</td>
-            </tr>
-            <tr>
-                <td>Pori – Linie Pori Leuchtturm – Säppi</td>
-                <td>STPOLIPOLESA</td>
-            </tr>
-            <tr>
-                <td>Linie Pori Lt. – Säppi – See im W</td>
-                <td>STLIPOLTSASEIMW</td>
-            </tr>
-            <tr>
-                <td>Hohe See Länge Yttergrund u. Rauma</td>
-                <td>STHOSELAYTU.RA</td>
-            </tr>
-            <tr>
-                <td>Rauma, Hafen – Kylmäpihlaja</td>
-                <td>STRAHAKY</td>
-            </tr>
-            <tr>
-                <td>Kylmäpihlaja – Rauma Leuchtturm</td>
-                <td>STKYRALE</td>
-            </tr>
-            <tr>
-                <td>Rauma Leuchtturm, See im W</td>
-                <td>STRALESEIMW</td>
-            </tr>
-            <tr>
-                <td>Breitengrad Rauma, offene See im S</td>
-                <td>STBRRAOFSEIMS</td>
-            </tr>
-            <tr>
-                <td>Uusikaupunki, Hafen – Kirsta</td>
-                <td>STUUHAKI</td>
-            </tr>
-            <tr>
-                <td>Kirsta – Isokari</td>
-                <td>STKIIS</td>
-            </tr>
-            <tr>
-                <td>Isokari – Sandbäck</td>
-                <td>STISSA</td>
-            </tr>
-            <tr>
-                <td>Sandbäck, Seegebiet außerhalb</td>
-                <td>STSASEAU2</td>
-            </tr>
-            <tr>
-                <td>Sälskär, See im N</td>
-                <td>STSASEIMN</td>
-            </tr>
-            <tr>
-                <td>Märket, See im N</td>
-                <td>STMASEIMN</td>
-            </tr>
-            <tr>
-                <td>Märket, See im W</td>
-                <td>STMASEIMW</td>
-            </tr>
-            <tr>
-                <td>Märket, See im S</td>
-                <td>STMASEIMS</td>
-            </tr>
-            <tr>
-                <td>Maarianhamina – Marhällan</td>
-                <td>STMAMA</td>
-            </tr>
-            <tr>
-                <td>See außerhalb Nyhamn u. Marhällan</td>
-                <td>STSEAUNYUMA</td>
-            </tr>
-            <tr>
-                <td>Ålandsee, mittlerer Teil</td>
-                <td>STALMITE</td>
-            </tr>
-            <tr>
-                <td>Lågskär, See im S</td>
-                <td>STLASEIMS</td>
-            </tr>
-            <tr>
-                <td>Naantali und Turku – Rajakari</td>
-                <td>STNAUNTURA</td>
-            </tr>
-            <tr>
-                <td>Rajakari – Lövskär</td>
-                <td>STRALO</td>
-            </tr>
-            <tr>
-                <td>Lövskär – Korra</td>
-                <td>STLOKO</td>
-            </tr>
-            <tr>
-                <td>Korra – Isokari</td>
-                <td>STKOIS</td>
-            </tr>
-            <tr>
-                <td>Lövskär – Berghamn</td>
-                <td>STLOBE</td>
-            </tr>
-            <tr>
-                <td>Berghamn – Stora Sottunga</td>
-                <td>STBESTSO</td>
-            </tr>
-            <tr>
-                <td>Stora Sottunga – Ledskär</td>
-                <td>STSTSOLE</td>
-            </tr>
-            <tr>
-                <td>Rödhamn, Seegebiet</td>
-                <td>STROSE</td>
-            </tr>
-            <tr>
-                <td>Lövskär – Grisselborg</td>
-                <td>STLOGR</td>
-            </tr>
-            <tr>
-                <td>Grisselborg – Norparskär</td>
-                <td>STGRNO</td>
-            </tr>
-            <tr>
-                <td>Vidskär, Seegebiet</td>
-                <td>STVISE</td>
-            </tr>
-            <tr>
-                <td>Utö – Suomen Leijona</td>
-                <td>STUTSULE</td>
-            </tr>
-            <tr>
-                <td>Suomen Leijona, See im S</td>
-                <td>STSULESEIMS</td>
-            </tr>
-            <tr>
-                <td>Hanko, Hafen – Hanko 1</td>
-                <td>STHAHAHA1</td>
-            </tr>
-            <tr>
-                <td>Hanko 1, See im S</td>
-                <td>STHA1SEIMS</td>
-            </tr>
-            <tr>
-                <td>Hanko – Vitgrund</td>
-                <td>STHAVI</td>
-            </tr>
-            <tr>
-                <td>Vitgrund – Utö</td>
-                <td>STVIUT</td>
-            </tr>
-            <tr>
-                <td>Koverhar – Hästö Busö</td>
-                <td>STKOHÄBU</td>
-            </tr>
-            <tr>
-                <td>Hästö Busö – Ajax</td>
-                <td>STHABUAJ</td>
-            </tr>
-            <tr>
-                <td>Ajax, See im S</td>
-                <td>STAJSEIMS</td>
-            </tr>
-            <tr>
-                <td>Inkoo u. Kantvik – Porkkala See</td>
-                <td>STINUKAPOSE</td>
-            </tr>
-            <tr>
-                <td>Porkkala, Seegebiet</td>
-                <td>STPOSE</td>
-            </tr>
-            <tr>
-                <td>Porkkala Leuchtturm, See im S</td>
-                <td>STPOLESEIMS</td>
-            </tr>
-            <tr>
-                <td>Helsinki, Hafen – Harmaja</td>
-                <td>STHEHAHA</td>
-            </tr>
-            <tr>
-                <td>Harmaja – Helsinki Leuchtturm</td>
-                <td>STHAHELE</td>
-            </tr>
-            <tr>
-                <td>Helsinki Lt. – Porkkala Lt., See im S</td>
-                <td>STHELTPOLTSEIMS</td>
-            </tr>
-            <tr>
-                <td>Helsinki – Porkkala – Rönnskär, Fahrw.</td>
-                <td>STHEPOROFA</td>
-            </tr>
-            <tr>
-                <td>Vuosaari Hafen – Eestiluoto</td>
-                <td>STVUHAEE</td>
-            </tr>
-            <tr>
-                <td>Eestiluoto – Helsinki Leuchtturm</td>
-                <td>STEEHELE</td>
-            </tr>
-            <tr>
-                <td>Porvoo, Hafen – Varlax</td>
-                <td>STPOHAVA</td>
-            </tr>
-            <tr>
-                <td>Varlax – Porvoo Leuchtturm</td>
-                <td>STVAPOLE</td>
-            </tr>
-            <tr>
-                <td>Porvoo Leuchtturm – Kalbådagrund</td>
-                <td>STPOLEKA</td>
-            </tr>
-            <tr>
-                <td>Kalbådagrund – Helsinki Lt.</td>
-                <td>STKAHELT</td>
-            </tr>
-            <tr>
-                <td>Valko, Hafen – Täktarn</td>
-                <td>STVAHATA</td>
-            </tr>
-            <tr>
-                <td>Boistö – Glosholm, Schärenfahrwasser</td>
-                <td>STBOGLSC</td>
-            </tr>
-            <tr>
-                <td>Glosholm–Helsinki, Schärenfahrwasser</td>
-                <td>STGLSC</td>
-            </tr>
-            <tr>
-                <td>Kotka – Viikari</td>
-                <td>STKOVI</td>
-            </tr>
-            <tr>
-                <td>Viikari – Orrengrund</td>
-                <td>STVIOR</td>
-            </tr>
-            <tr>
-                <td>Orrengrund – Tiiskeri</td>
-                <td>STORTI</td>
-            </tr>
-            <tr>
-                <td>Tiiskeri – Kalbådagrund</td>
-                <td>STTIKA</td>
-            </tr>
-            <tr>
-                <td>Hamina – Suurmusta</td>
-                <td>STHASU</td>
-            </tr>
-            <tr>
-                <td>Suurmusta – Merikari</td>
-                <td>STSUME</td>
-            </tr>
-            <tr>
-                <td>Merikari – Kaunissaari</td>
-                <td>STMEKA</td>
-            </tr>
-        </tbody>
-    </table>
-    <h1 id="usage-and-examples">Usage and Examples</h1>
-    <p>Below are the example usage of API&#39;s</p>
-    <ol>
-        <li>Endpoint 1</li>
-        <li>Request URL - <a
-                href="https://ice-spice-production.up.railway.app/api/station_data?stationCode=STTIKA">https://ice-spice-production.up.railway.app/api/station_data?stationCode=STTIKA</a>
-        </li>
-        <li>Request Method - <code>GET</code></li>
-    </ol>
-    <p>Output</p>
-    <pre><code class="lang-JSON">{
+    <div class="container">
+        <h1 id="ice-spice-api-to-fetch-baltic-sea-ice-data">ICE SPICE - API to fetch Baltic Sea Ice data</h1>
+        <p>REST API to fetch Baltic Sea Ice Data recorded by different metrological stations in Finland.</p>
+        <h2 id="table-of-contents">Table of Contents</h2>
+        <ul>
+            <li><a href="#apis-schema">API&#39;s Schema</a></li>
+            <li><a href="#generated-station-code">Generated Station Code</a></li>
+            <li><a href="#usage-and-examples">Usage and Examples</a></li>
+            <li><a href="#description-of-data">Description of Data</a></li>
+            <li><a href="#data-source">Data Source</a></li>
+            <li><a href="#technologies-used">Technologies Used</a></li>
+            <li><a href="#contribution">Contribution</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <h1 id="api-s-schema">API&#39;s Schema</h1>
+        <p>Currently the application supports below end points and no auth is required for them as of now.</p>
+        <ol>
+            <li>
+                <p>Endpoint 1</p>
+            </li>
+            <li>
+                <p>Request URL - <a
+                        href="https://ice-spice-production.up.railway.app/api/station_data?stationCode=STATION_CODE">https://ice-spice-production.up.railway.app/api/station_data?stationCode=STATION_CODE</a>
+                </p>
+            </li>
+            <li>Request Method - <code>GET</code></li>
+            <li>Request Query Param - <code>stationCode</code></li>
+            <li>Query Param Value - value for <code>stationCode</code> query param can be obtained from the below table
+                where station code for each metrological station is given.</li>
+        </ol>
+        <p>It gives all the ice data and the analysis calculated on it by that metrological station whose station code
+            is
+            added in the params. It can be used to fetch all the data recorded by particular metrological station over
+            the
+            past years.</p>
+        <ol>
+            <li>
+                <p>Endpoint 2 </p>
+            </li>
+            <li>
+                <p>Request URL - <a
+                        href="https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STATION_CODE">https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STATION_CODE</a>
+                </p>
+            </li>
+            <li>Request Method - <code>GET</code></li>
+            <li>Request Query Param - <code>stationCode</code></li>
+            <li>Query Param Value - value for <code>stationCode</code> query param can be obtained from the below table
+                where station code for each metrological station is given.</li>
+        </ol>
+        <p>It can be used to fetch only the analysis data obtained by particular metrological station over the past
+            years of
+            the ice data recorded by it.</p>
+        <h1 id="generated-station-code">Generated Station Code</h1>
+        <p>Station code generated for different metrological stations of Finland is given below.</p>
+        <table id="stations-data">
+            <thead>
+                <tr>
+                    <th>STATION NAME</th>
+                    <th>GENERATED STATION CODE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Röyttä – Etukari</td>
+                    <td>STROET</td>
+                </tr>
+                <tr>
+                    <td>Etukari – Ristinmatala</td>
+                    <td>STETRI</td>
+                </tr>
+                <tr>
+                    <td>Ajos – Ristinmatala</td>
+                    <td>STAJRI</td>
+                </tr>
+                <tr>
+                    <td>Ristinmatala – Kemi 2</td>
+                    <td>STRIKE2</td>
+                </tr>
+                <tr>
+                    <td>Kemi 2 – Kemi 1</td>
+                    <td>STKE2KE1</td>
+                </tr>
+                <tr>
+                    <td>Kemi 1, Seegebiet im SW</td>
+                    <td>STKE1SEIMSW</td>
+                </tr>
+                <tr>
+                    <td>Kemi 2 – Ulkokrunni – Virpiniemi</td>
+                    <td>STKE2ULVI</td>
+                </tr>
+                <tr>
+                    <td>Oulu, Hafen – Kattilankalla</td>
+                    <td>STOUHAKA</td>
+                </tr>
+                <tr>
+                    <td>Kattilankalla – Oulu 1</td>
+                    <td>STKAOU1</td>
+                </tr>
+                <tr>
+                    <td>Oulu 1, Seegebiet im SW</td>
+                    <td>STOU1SEIMSW</td>
+                </tr>
+                <tr>
+                    <td>Offene See N-lich Breite Marjaniemi</td>
+                    <td>STOFSEN-BRMA</td>
+                </tr>
+                <tr>
+                    <td>Raahe, Hafen – Heikinkari</td>
+                    <td>STRAHAHE</td>
+                </tr>
+                <tr>
+                    <td>Heikinkari – Raahe Leuchtturm</td>
+                    <td>STHERALE</td>
+                </tr>
+                <tr>
+                    <td>Raahe Leuchtturm – Nahkiainen</td>
+                    <td>STRALENA</td>
+                </tr>
+                <tr>
+                    <td>Breitengrad Marjaniemi – Ulkokalla, See</td>
+                    <td>STBRMAULSE</td>
+                </tr>
+                <tr>
+                    <td>Rahja, Hafen – Välimatala</td>
+                    <td>STRAHAVA</td>
+                </tr>
+                <tr>
+                    <td>Välimatala bis Linie Ulkokalla – Ykskivi</td>
+                    <td>STVABILIULYK</td>
+                </tr>
+                <tr>
+                    <td>Breitengrad Ulkokalla – Pietarsaari, See</td>
+                    <td>STBRULPISE</td>
+                </tr>
+                <tr>
+                    <td>Ykspihlaja – Repskär</td>
+                    <td>STYKRE</td>
+                </tr>
+                <tr>
+                    <td>Repskär – Kokkola Leuchtturm</td>
+                    <td>STREKOLE</td>
+                </tr>
+                <tr>
+                    <td>Kokkola Leuchtturm, See außerhalb</td>
+                    <td>STKOLESEAU</td>
+                </tr>
+                <tr>
+                    <td>Pietarsaari – Kallan</td>
+                    <td>STPIKA</td>
+                </tr>
+                <tr>
+                    <td>Kallan, Seegebiet außerhalb</td>
+                    <td>STKASEAU</td>
+                </tr>
+                <tr>
+                    <td>Breite Pietarsaari – Nordvalen im NE</td>
+                    <td>STBRPINOIMNE</td>
+                </tr>
+                <tr>
+                    <td>Nordvalen, Seegebiet im ENE</td>
+                    <td>STNOSEIMEN</td>
+                </tr>
+                <tr>
+                    <td>Nordvalen – Norrskär, See im W</td>
+                    <td>STNONOSEIMW</td>
+                </tr>
+                <tr>
+                    <td>Vaskiluoto – Ensten</td>
+                    <td>STVAEN</td>
+                </tr>
+                <tr>
+                    <td>Ensten – Vaasa Leuchtturm</td>
+                    <td>STENVALE</td>
+                </tr>
+                <tr>
+                    <td>Vaasa Leuchtturm – Norrskär</td>
+                    <td>STVALENO</td>
+                </tr>
+                <tr>
+                    <td>Norrskär, Seegebiet im SW</td>
+                    <td>STNOSEIMSW</td>
+                </tr>
+                <tr>
+                    <td>Kaskinen – Sälgrund</td>
+                    <td>STKASA</td>
+                </tr>
+                <tr>
+                    <td>Sälgrund, Seegebiet außerhalb</td>
+                    <td>STSASEAU</td>
+                </tr>
+                <tr>
+                    <td>Offene See N-lich Breite Yttergrund</td>
+                    <td>STOFSEN-BRYT</td>
+                </tr>
+                <tr>
+                    <td>Pori – Linie Pori Leuchtturm – Säppi</td>
+                    <td>STPOLIPOLESA</td>
+                </tr>
+                <tr>
+                    <td>Linie Pori Lt. – Säppi – See im W</td>
+                    <td>STLIPOLTSASEIMW</td>
+                </tr>
+                <tr>
+                    <td>Hohe See Länge Yttergrund u. Rauma</td>
+                    <td>STHOSELAYTU.RA</td>
+                </tr>
+                <tr>
+                    <td>Rauma, Hafen – Kylmäpihlaja</td>
+                    <td>STRAHAKY</td>
+                </tr>
+                <tr>
+                    <td>Kylmäpihlaja – Rauma Leuchtturm</td>
+                    <td>STKYRALE</td>
+                </tr>
+                <tr>
+                    <td>Rauma Leuchtturm, See im W</td>
+                    <td>STRALESEIMW</td>
+                </tr>
+                <tr>
+                    <td>Breitengrad Rauma, offene See im S</td>
+                    <td>STBRRAOFSEIMS</td>
+                </tr>
+                <tr>
+                    <td>Uusikaupunki, Hafen – Kirsta</td>
+                    <td>STUUHAKI</td>
+                </tr>
+                <tr>
+                    <td>Kirsta – Isokari</td>
+                    <td>STKIIS</td>
+                </tr>
+                <tr>
+                    <td>Isokari – Sandbäck</td>
+                    <td>STISSA</td>
+                </tr>
+                <tr>
+                    <td>Sandbäck, Seegebiet außerhalb</td>
+                    <td>STSASEAU2</td>
+                </tr>
+                <tr>
+                    <td>Sälskär, See im N</td>
+                    <td>STSASEIMN</td>
+                </tr>
+                <tr>
+                    <td>Märket, See im N</td>
+                    <td>STMASEIMN</td>
+                </tr>
+                <tr>
+                    <td>Märket, See im W</td>
+                    <td>STMASEIMW</td>
+                </tr>
+                <tr>
+                    <td>Märket, See im S</td>
+                    <td>STMASEIMS</td>
+                </tr>
+                <tr>
+                    <td>Maarianhamina – Marhällan</td>
+                    <td>STMAMA</td>
+                </tr>
+                <tr>
+                    <td>See außerhalb Nyhamn u. Marhällan</td>
+                    <td>STSEAUNYUMA</td>
+                </tr>
+                <tr>
+                    <td>Ålandsee, mittlerer Teil</td>
+                    <td>STALMITE</td>
+                </tr>
+                <tr>
+                    <td>Lågskär, See im S</td>
+                    <td>STLASEIMS</td>
+                </tr>
+                <tr>
+                    <td>Naantali und Turku – Rajakari</td>
+                    <td>STNAUNTURA</td>
+                </tr>
+                <tr>
+                    <td>Rajakari – Lövskär</td>
+                    <td>STRALO</td>
+                </tr>
+                <tr>
+                    <td>Lövskär – Korra</td>
+                    <td>STLOKO</td>
+                </tr>
+                <tr>
+                    <td>Korra – Isokari</td>
+                    <td>STKOIS</td>
+                </tr>
+                <tr>
+                    <td>Lövskär – Berghamn</td>
+                    <td>STLOBE</td>
+                </tr>
+                <tr>
+                    <td>Berghamn – Stora Sottunga</td>
+                    <td>STBESTSO</td>
+                </tr>
+                <tr>
+                    <td>Stora Sottunga – Ledskär</td>
+                    <td>STSTSOLE</td>
+                </tr>
+                <tr>
+                    <td>Rödhamn, Seegebiet</td>
+                    <td>STROSE</td>
+                </tr>
+                <tr>
+                    <td>Lövskär – Grisselborg</td>
+                    <td>STLOGR</td>
+                </tr>
+                <tr>
+                    <td>Grisselborg – Norparskär</td>
+                    <td>STGRNO</td>
+                </tr>
+                <tr>
+                    <td>Vidskär, Seegebiet</td>
+                    <td>STVISE</td>
+                </tr>
+                <tr>
+                    <td>Utö – Suomen Leijona</td>
+                    <td>STUTSULE</td>
+                </tr>
+                <tr>
+                    <td>Suomen Leijona, See im S</td>
+                    <td>STSULESEIMS</td>
+                </tr>
+                <tr>
+                    <td>Hanko, Hafen – Hanko 1</td>
+                    <td>STHAHAHA1</td>
+                </tr>
+                <tr>
+                    <td>Hanko 1, See im S</td>
+                    <td>STHA1SEIMS</td>
+                </tr>
+                <tr>
+                    <td>Hanko – Vitgrund</td>
+                    <td>STHAVI</td>
+                </tr>
+                <tr>
+                    <td>Vitgrund – Utö</td>
+                    <td>STVIUT</td>
+                </tr>
+                <tr>
+                    <td>Koverhar – Hästö Busö</td>
+                    <td>STKOHÄBU</td>
+                </tr>
+                <tr>
+                    <td>Hästö Busö – Ajax</td>
+                    <td>STHABUAJ</td>
+                </tr>
+                <tr>
+                    <td>Ajax, See im S</td>
+                    <td>STAJSEIMS</td>
+                </tr>
+                <tr>
+                    <td>Inkoo u. Kantvik – Porkkala See</td>
+                    <td>STINUKAPOSE</td>
+                </tr>
+                <tr>
+                    <td>Porkkala, Seegebiet</td>
+                    <td>STPOSE</td>
+                </tr>
+                <tr>
+                    <td>Porkkala Leuchtturm, See im S</td>
+                    <td>STPOLESEIMS</td>
+                </tr>
+                <tr>
+                    <td>Helsinki, Hafen – Harmaja</td>
+                    <td>STHEHAHA</td>
+                </tr>
+                <tr>
+                    <td>Harmaja – Helsinki Leuchtturm</td>
+                    <td>STHAHELE</td>
+                </tr>
+                <tr>
+                    <td>Helsinki Lt. – Porkkala Lt., See im S</td>
+                    <td>STHELTPOLTSEIMS</td>
+                </tr>
+                <tr>
+                    <td>Helsinki – Porkkala – Rönnskär, Fahrw.</td>
+                    <td>STHEPOROFA</td>
+                </tr>
+                <tr>
+                    <td>Vuosaari Hafen – Eestiluoto</td>
+                    <td>STVUHAEE</td>
+                </tr>
+                <tr>
+                    <td>Eestiluoto – Helsinki Leuchtturm</td>
+                    <td>STEEHELE</td>
+                </tr>
+                <tr>
+                    <td>Porvoo, Hafen – Varlax</td>
+                    <td>STPOHAVA</td>
+                </tr>
+                <tr>
+                    <td>Varlax – Porvoo Leuchtturm</td>
+                    <td>STVAPOLE</td>
+                </tr>
+                <tr>
+                    <td>Porvoo Leuchtturm – Kalbådagrund</td>
+                    <td>STPOLEKA</td>
+                </tr>
+                <tr>
+                    <td>Kalbådagrund – Helsinki Lt.</td>
+                    <td>STKAHELT</td>
+                </tr>
+                <tr>
+                    <td>Valko, Hafen – Täktarn</td>
+                    <td>STVAHATA</td>
+                </tr>
+                <tr>
+                    <td>Boistö – Glosholm, Schärenfahrwasser</td>
+                    <td>STBOGLSC</td>
+                </tr>
+                <tr>
+                    <td>Glosholm–Helsinki, Schärenfahrwasser</td>
+                    <td>STGLSC</td>
+                </tr>
+                <tr>
+                    <td>Kotka – Viikari</td>
+                    <td>STKOVI</td>
+                </tr>
+                <tr>
+                    <td>Viikari – Orrengrund</td>
+                    <td>STVIOR</td>
+                </tr>
+                <tr>
+                    <td>Orrengrund – Tiiskeri</td>
+                    <td>STORTI</td>
+                </tr>
+                <tr>
+                    <td>Tiiskeri – Kalbådagrund</td>
+                    <td>STTIKA</td>
+                </tr>
+                <tr>
+                    <td>Hamina – Suurmusta</td>
+                    <td>STHASU</td>
+                </tr>
+                <tr>
+                    <td>Suurmusta – Merikari</td>
+                    <td>STSUME</td>
+                </tr>
+                <tr>
+                    <td>Merikari – Kaunissaari</td>
+                    <td>STMEKA</td>
+                </tr>
+            </tbody>
+        </table>
+        <h1 id="usage-and-examples">Usage and Examples</h1>
+        <p>Below are the example usage of API&#39;s</p>
+        <ol>
+            <li>Endpoint 1</li>
+            <li>Request URL - <a
+                    href="https://ice-spice-production.up.railway.app/api/station_data?stationCode=STTIKA">https://ice-spice-production.up.railway.app/api/station_data?stationCode=STTIKA</a>
+            </li>
+            <li>Request Method - <code>GET</code></li>
+        </ol>
+        <p>Output</p>
+        <pre>
+            <code class="lang-JSON">{
     <span class="hljs-attr">"data"</span>: {
         <span class="hljs-attr">"analysis-data-station"</span>: [
             {
@@ -507,15 +587,15 @@
     <span class="hljs-attr">"message"</span>: <span class="hljs-string">"metro station data fetched successfully"</span>
 }
 </code></pre>
-    <ol>
-        <li>Endpoint 2</li>
-        <li>Request URL - <a
-                href="https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STTIKA">https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STTIKA</a>
-        </li>
-        <li>Request Method - <code>GET</code></li>
-    </ol>
-    <p>Output</p>
-    <pre><code class="lang-JSON">{
+        <ol>
+            <li>Endpoint 2</li>
+            <li>Request URL - <a
+                    href="https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STTIKA">https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STTIKA</a>
+            </li>
+            <li>Request Method - <code>GET</code></li>
+        </ol>
+        <p>Output</p>
+        <pre><code class="lang-JSON">{
     <span class="hljs-attr">"data"</span>: {
         <span class="hljs-attr">"analysis-data-station"</span>: [
             {
@@ -536,59 +616,71 @@
     <span class="hljs-attr">"message"</span>: <span class="hljs-string">"metro station analysis data fetched successfully"</span>
 }
 </code></pre>
-    <h1 id="description-of-data">Description of Data</h1>
-    <ul>
-        <li>The yearly statistics of a single station are contained in the response of the first API. </li>
-        <li>In each data object in <code>stations-data</code> array in response. It contains the <code>beginning</code>
-            and the <code>end</code> of the ice season at that station (so first and last day with ice).</li>
-        <li><code>season_length</code> is the length of the season, just the days between first and last ice occurence.
-        </li>
-        <li><code>ice_days</code> gives the number of days with ice, the maximum possible value is the length of the
-            season, but mostly there are less days with ice, as the season mostly is not continuos. </li>
-        <li><code>fl_total</code> is the area sum, that is the sum of all concentrations. </li>
-        <li><code>vol_sum</code> is the volume sum, the total sum of concentration times thickness.</li>
-        <li><code>max_thickness</code> is the maximum ice thichness from measurements.</li>
-        <li><code>max_thickness2</code> is the maximum ice thichness from coded ice reports according to the Baltic sea
-            ice code.</li>
-        <li><code>restricted_days</code> give the days with restrictions acc to the baltic sea ice code. Starting with
-            minimum restriction=1 up, then minimum=2, etc.</li>
-        <li><code>analysis-data-station</code> gives the summary of all the data of a station. Although the statistic is
-            based on checked data, errors still can occur. And although many stations are continuosly, not all start the
-            same year and some are discontinued. Also some stations were not measured in time in between (for example
-            due to illness or death of the ice observer).</li>
-        <li>For more information visit <a href="https://www.bsis-ice.de/statistik/StatistikInfo.html">here.</a></li>
-    </ul>
-    <h1 id="data-source">Data Source</h1>
-    <p>The data is scraped from website of <a href="https://www.bsis-ice.de/technical_informations.shtml">Baltic Sea Ice
-            Services</a>. They have listed baltic sea ice data for various countries on their website. It can be viewed
-        <a href="https://www.bsis-ice.de/statistik/Stationindex.html">here.</a> I&#39;ve scraped data for Finland and
-        stored it in PostgreSQL database for querying through API.
-    </p>
-    <h1 id="technologies-used">Technologies Used</h1>
-    <p><img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&amp;logo=go&amp;logoColor=white"
-            alt="Go"><img
-            src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white"
-            alt="Postgres"><img
-            src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white"
-            alt="NodeJS"></p>
-    <h1 id="contribution">Contribution</h1>
-    <p>Feel free to raise issues and pull requests for contribution.</p>
-    <h1 id="contact">Contact</h1>
-    <p>
-        <a href="https://github.com/srrathi"><img
-                src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white"
-                alt="srrathi github"></a>
-        <a href="https://www.linkedin.com/in/sitaram-rathi-519152197/"><img
-                src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"
-                alt="Sitaram Rathi Linkedin"></a>
-        <a href="mailto:srrathi2000@gmail.com"><img
-                src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"
-                alt="Sitaram Rathi email"></a>
-        <a href="https://twitter.com/SitaramRathi5"><img
-                src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&amp;logo=twitter&amp;logoColor=white"
-                alt="Sitaram Rathi twitter"></a>
-    </p>
+        <h1 id="description-of-data">Description of Data</h1>
+        <ul>
+            <li>The yearly statistics of a single station are contained in the response of the first API. </li>
+            <li>In each data object in <code>stations-data</code> array in response. It contains the
+                <code>beginning</code>
+                and the <code>end</code> of the ice season at that station (so first and last day with ice).
+            </li>
+            <li><code>season_length</code> is the length of the season, just the days between first and last ice
+                occurence.
+            </li>
+            <li><code>ice_days</code> gives the number of days with ice, the maximum possible value is the length of the
+                season, but mostly there are less days with ice, as the season mostly is not continuos. </li>
+            <li><code>fl_total</code> is the area sum, that is the sum of all concentrations. </li>
+            <li><code>vol_sum</code> is the volume sum, the total sum of concentration times thickness.</li>
+            <li><code>max_thickness</code> is the maximum ice thichness from measurements.</li>
+            <li><code>max_thickness2</code> is the maximum ice thichness from coded ice reports according to the Baltic
+                sea
+                ice code.</li>
+            <li><code>restricted_days</code> give the days with restrictions acc to the baltic sea ice code. Starting
+                with
+                minimum restriction=1 up, then minimum=2, etc.</li>
+            <li><code>analysis-data-station</code> gives the summary of all the data of a station. Although the
+                statistic is
+                based on checked data, errors still can occur. And although many stations are continuosly, not all start
+                the
+                same year and some are discontinued. Also some stations were not measured in time in between (for
+                example
+                due to illness or death of the ice observer).</li>
+            <li>For more information visit <a href="https://www.bsis-ice.de/statistik/StatistikInfo.html">here.</a></li>
+        </ul>
+        <h1 id="data-source">Data Source</h1>
+        <p>The data is scraped from website of <a href="https://www.bsis-ice.de/technical_informations.shtml">Baltic Sea
+                Ice
+                Services</a>. They have listed baltic sea ice data for various countries on their website. It can be
+            viewed
+            <a href="https://www.bsis-ice.de/statistik/Stationindex.html">here.</a> I&#39;ve scraped data for Finland
+            and
+            stored it in PostgreSQL database for querying through API.
+        </p>
+        <h1 id="technologies-used">Technologies Used</h1>
+        <p><img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&amp;logo=go&amp;logoColor=white"
+                alt="Go"><img
+                src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white"
+                alt="Postgres"><img
+                src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white"
+                alt="NodeJS"></p>
+        <h1 id="contribution">Contribution</h1>
+        <p>Feel free to raise issues and pull requests for contribution.</p>
+        <h1 id="contact">Contact</h1>
+        <p>
+            <a href="https://github.com/srrathi"><img
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&amp;logo=github&amp;logoColor=white"
+                    alt="srrathi github"></a>
+            <a href="https://www.linkedin.com/in/sitaram-rathi-519152197/"><img
+                    src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"
+                    alt="Sitaram Rathi Linkedin"></a>
+            <a href="mailto:srrathi2000@gmail.com"><img
+                    src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"
+                    alt="Sitaram Rathi email"></a>
+            <a href="https://twitter.com/SitaramRathi5"><img
+                    src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&amp;logo=twitter&amp;logoColor=white"
+                    alt="Sitaram Rathi twitter"></a>
+        </p>
 
+    </div>
 </body>
 
 </html>
