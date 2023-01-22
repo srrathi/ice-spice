@@ -1,4 +1,5 @@
-# <img alt="ICE-SPICE" src="./public/logo.png?raw=true" width="5%" height="5%"> ICE SPICE - API to fetch Baltic Sea Ice data
+# ICE SPICE - API to fetch Baltic Sea Ice data
+![Ice-spice](public/logo.png?raw=true)
 
 REST API to fetch Baltic Sea Ice Data recorded by different metrological stations in Finland.
 
