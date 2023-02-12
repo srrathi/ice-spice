@@ -3,8 +3,11 @@ package main
 import (
 	"log"
 	"os"
+	"time"
 
 	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/limiter"
+
 	"github.com/srrathi/ice-spice/controller"
 	"github.com/srrathi/ice-spice/models"
 	"github.com/srrathi/ice-spice/storage"
@@ -39,6 +42,12 @@ func main() {
 
 	app.Static("/", "./public")
 	app.Static("/public", "./public")
+
+	app.Use(limiter.New(limiter.Config{
+		Max:            20,
+		Expiration:     60 * time.Second,
+		LimiterMiddleware: limiter.SlidingWindow{},
+	}))
 
 	r.SetupRoutes(app)
 	app.Listen("0.0.0.0:" + APP_PORT)
