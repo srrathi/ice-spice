@@ -1,7 +1,7 @@
 # ICE SPICE - API to fetch Baltic Sea Ice data
 ![Ice-spice](public/logo.png?raw=true)
 
-REST API to fetch Baltic Sea Ice Data recorded by different metrological stations in Finland.
+SIMPLE REST API to fetch Baltic Sea Ice Data recorded by different metrological stations in Finland
 
 ## Table of Contents
 
