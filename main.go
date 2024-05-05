@@ -16,7 +16,7 @@ import (
 func main() {
 	APP_PORT := os.Getenv("PORT")
 	if APP_PORT == "" {
-		APP_PORT = 10000
+		APP_PORT = "10000"
 	}
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
@@ -53,5 +53,5 @@ func main() {
 	}))
 
 	r.SetupRoutes(app)
-	app.Listen("0.0.0.0:" + APP_PORT)
+	app.Listen(":" + APP_PORT)
 }
