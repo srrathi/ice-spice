@@ -15,6 +15,9 @@ import (
 
 func main() {
 	APP_PORT := os.Getenv("PORT")
+	if APP_PORT == "" {
+		APP_PORT = 10000
+	}
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
 		Port:     os.Getenv("DB_PORT"),

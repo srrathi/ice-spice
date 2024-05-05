@@ -33,7 +33,7 @@ func (r *Repository) GetStationData(context *fiber.Ctx) error {
 		return nil
 	}
 
-	err := r.DB.Table("stations_data").Where("station_code= ?", stationCode).Find(stationsModels).Error
+	err := r.DB.Table("station_data").Where("station_code= ?", stationCode).Find(stationsModels).Error
 	if err != nil {
 		context.Status(http.StatusBadRequest).JSON(
 			&fiber.Map{"message": "could not get stations"})
