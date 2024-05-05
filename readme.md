@@ -20,7 +20,7 @@ Currently the application supports below end points and no auth is required for 
 
 1. Endpoint 1
 
-- Request URL - https://ice-spice-production.up.railway.app/api/station_data?stationCode=STATION_CODE
+- Request URL - https://ice-spice.onrender.com/api/station_data?stationCode=STATION_CODE
 - Request Method - `GET`
 - Request Query Param - `stationCode`
 - Query Param Value - value for `stationCode` query param can be obtained from the below table where station code for each metrological station is given.
@@ -29,7 +29,7 @@ It gives all the ice data and the analysis calculated on it by that metrological
 
 2. Endpoint 2 
 
-- Request URL - https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STATION_CODE
+- Request URL - https://ice-spice.onrender.com/api/analysis_data?stationCode=STATION_CODE
 - Request Method - `GET`
 - Request Query Param - `stationCode`
 - Query Param Value - value for `stationCode` query param can be obtained from the below table where station code for each metrological station is given.
@@ -141,7 +141,7 @@ Merikari – Kaunissaari  |  STMEKA
 Below are the example usage of API's
 
 1. Endpoint 1
-- Request URL - https://ice-spice-production.up.railway.app/api/station_data?stationCode=STTIKA
+- Request URL - https://ice-spice.onrender.com/api/station_data?stationCode=STTIKA
 - Request Method - `GET`
 
 Output
@@ -196,7 +196,7 @@ Output
 ```
 
 2. Endpoint 2
-- Request URL - https://ice-spice-production.up.railway.app/api/analysis_data?stationCode=STTIKA
+- Request URL - https://ice-spice.onrender.com/api/analysis_data?stationCode=STTIKA
 - Request Method - `GET`
 
 Output
